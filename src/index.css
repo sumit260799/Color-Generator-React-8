@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+.color-light {
+  color: aliceblue;
+}
+
+section {
+  width: 90%;
+  justify-content: center;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.colr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 1rem;
+  row-gap: 1rem;
+  cursor: pointer;
+  /* align-content: center; */
+}
+
+.color {
+  height: 150px;
+  border-radius: 20px;
+
+}
+
+form {
+  align-items: center;
+}
+
+@media screen and (max-width:392px) {
+
+  form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr 2fr 1fr);
+    justify-content: center;
+    /* overflow: hidden; */
+    /* align-items: center; */
+  }
+
+  form input:nth-child(2) {
+    padding: 0.8rem 0;
+    padding-bottom: 0.5rem;
+    position: relative;
+    top: -13%;
+  }
+
+  form button {
+    padding-bottom: 0.5rem;
+
+  }
+}
+
+@media (min-width:393px) and (max-width:765px) {
+
+  form input:nth-child(2) {
+    padding: 0.5rem 0;
+    /* padding-bottom: 0.4rem; */
+    /* position: relative;
+        top: -13%; */
+  }
+
+  form button {
+    position: absolute;
+    top: 14%;
+  }
+}
