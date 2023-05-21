@@ -19,11 +19,11 @@ function SingleColor({ color, index }) {
 
   return (
     <article
-      className={index > 20 ? "color color-light" : "color"}
+      className={index > 13 ? "color color-light" : "color"}
       style={{ background: `#${hex}` }}
       onClick={saveToClipboard}
     >
-      <div className="mt-10 font-normal tracking-wide">
+      <div className="mt-12 font-normal tracking-wide">
         <p className="percent-value">{weight}%</p>
         <p className="color-value">#{hex}</p>
       </div>

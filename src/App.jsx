@@ -4,12 +4,12 @@ import Values from "values.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 export default function App() {
-  const [colors, setColors] = useState(new Values("#59d506").all(5));
+  const [colors, setColors] = useState(new Values("#e818c1").all(7));
 
   const [color, setColor] = useState("");
   const addColor = (color) => {
     try {
-      const newColors = new Values(color).all(5);
+      const newColors = new Values(color).all(7);
       setColors(newColors);
     } catch (error) {
       toast.error(error.message);
@@ -24,9 +24,9 @@ export default function App() {
   return (
     <section className=" mb-20">
       <div className="p-5 mb-5  ">
-        <h1 className="mb-5  font-bold text-[2rem]">
-          <span className="text-blue-600">C</span>olor{" "}
-          <span className="text-green-500">G</span>enerator
+        <h1 className="mb-5 font-serif  font-medium text-[2.2rem]">
+          <span className="text-[3.2rem] text-[#e818c1]">C</span>olor{" "}
+          <span className="text-[3.2rem] text-[#e818c1]">P</span>icker
         </h1>
         <form action="" className="" onSubmit={handleSubmit}>
           <input
@@ -47,7 +47,7 @@ export default function App() {
             id=""
           />
           <button
-            className="bg-green-700 mt-[-10px] px-2 md:pb-[0.2rem] text-white  rounded-tr-[10px] rounded-br-[10px] pt-2 text-[1.2rem] "
+            className="bg-[#e818c1] mt-[-10px] px-2 md:pb-[0.2rem] text-white  rounded-tr-[10px] rounded-br-[10px] pt-2 text-[1.2rem] "
             style={{ background: color }}
           >
             submit
